@@ -16,22 +16,29 @@ let i = 0
 //calculates the time taken to 
 console.time('time taken by the match : ')
 while (1) {
-    
+
     if (a[i] != 0) {
         if (kill) {
-           out.write(`[${a[i]}] and passed the gun to`)
+            out.write(`[${a[i]}] and passed the gun to`)
             a[i] = 0
         }
         else {
             out.write(` [${a[i]}]\n [${a[i]}] killed `)
-          }
+        }
 
         kill = !kill
     }
-    if (i + 1 == a.length) { if (new Set(a).size == 2) 
-        {out.write('  everyone !!!  \n------------------------------------\n')
-            break}
-    i = -1 }
+    if (i + 1 == a.length) {
+        if (a.filter((data) => {
+            if (data > 0)
+                return data
+        }).length == 1) {
+            out.write(' []\n------------------------------------\n')
+            break
+        
+        }
+        i = -1
+    }
     i++
 }
 console.timeEnd('time taken by the match : ')

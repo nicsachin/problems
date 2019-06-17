@@ -2,8 +2,9 @@
 
 let out = process.stdout
 
-let n = 1000000
+let n = 1000
 let a = []
+
 for (let i = 1; i <= n; i++) {
     a.push(i)
 }
@@ -13,19 +14,21 @@ let i = 0
 
 console.time('time taken by the match : ')
 while (1) {
-    
-    if (a[i]!=0) {
-        if (kill) 
+    if (a[i] != 0) {
+        if (kill)
             a[i] = 0
         kill = !kill
     }
     if (i + 1 == a.length) {
-        if (new Set(a).size == 2) 
-            break
-        i = -1 
-        }
+        if(a.filter((data) => {
+            if (data > 0)
+                return data
+        }).length == 1) 
+          break
+         i = -1
+    }
     i++
-   
+
 
 }
 console.timeEnd('time taken by the match : ')
