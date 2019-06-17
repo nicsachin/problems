@@ -1,5 +1,5 @@
 //let out = process.stdout
-console.time('time taken by the match : ')
+
 let out = process.stdout
 
 let n = 100
@@ -10,6 +10,8 @@ for (let i = 1; i <= n; i++) {
 
 let kill = false
 let i = 0
+
+console.time('time taken by the match : ')
 while (1) {
     if (new Set(a).size == 2) 
         break
@@ -22,5 +24,5 @@ while (1) {
     if (i + 1 == a.length) { i = -1 }
     i++
 }
-out.write(`\n------------------------------------\n${Math.max.apply(null, a)} will remain alive and won the match \n------------------------------------\n`)
 console.timeEnd('time taken by the match : ')
+out.write(`\n------------------------------------\n${Math.max.apply(null, a)} will remain alive and won the match \n------------------------------------\n`)
