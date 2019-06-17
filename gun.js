@@ -1,14 +1,18 @@
 
-let n = 1000
+
+
+//give it a number of people standing in a circle 
+let n = 100
+//array which will store all the info
 let a = []
+
 for (let i = 0; i < n; i++) {
     a.push(i + 1)
-
 }
-let flag = false
+
 let kill = false
 let i = 0
-while (i < a.length) {
+while(true) {
     if (new Set(a).size == 2) {
         break
     }
@@ -34,5 +38,5 @@ while (i < a.length) {
 
 a.map((data) => {
     if (data != 0)
-        console.log(data)
+        console.log(`${data} survives till last` )
 })
