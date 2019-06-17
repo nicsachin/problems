@@ -1,6 +1,8 @@
 
 ## problem statement
-###There are n people standing in a circle. Person standing at 1st position kills next person ( i.e. the person standing at 2nd position ) and gives sword to next to next person ( i.e. the person standing at 3rd position ). Which person survives in the last ?
+### There are n players standing in a circle. Player standing at 1st position kills next player ( i.e. the player standing at 2nd player ) and gives gun  to next player ( i.e. the player standing at 3rd position ). Which player survives in the last ?
 
--To run this program just run "node gun" command in terminal
+-To run this program just run "node gun" or "node logic" command in terminal
 
+gun.js -> file contains live commentary of players  
+logic.js -> only the logic will take less time to execute

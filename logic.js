@@ -1,15 +1,9 @@
+//let out = process.stdout
+console.time('time taken by the match : ')
 let out = process.stdout
 
-//calculates the time taken to 
-console.time('time taken by the match : ')
-
-//give it a number of people standing in a circle 
-let n = 1000
-
-//array which will store all the info
+let n = 100
 let a = []
-
-//loop which will add all the players  to the array
 for (let i = 1; i <= n; i++) {
     a.push(i)
 }
@@ -17,18 +11,12 @@ for (let i = 1; i <= n; i++) {
 let kill = false
 let i = 0
 while (1) {
-    if (new Set(a).size == 2) {
+    if (new Set(a).size == 2) 
         break
-    }
-    if (a[i] != 0) {
-        if (kill) {
-           out.write(`[${a[i]}] and passed the gun to`)
+    
+    if (a[i]!=0) {
+        if (kill) 
             a[i] = 0
-        }
-        else {
-            out.write(` [${a[i]}]\n [${a[i]}] killed `)
-          }
-
         kill = !kill
     }
     if (i + 1 == a.length) { i = -1 }
