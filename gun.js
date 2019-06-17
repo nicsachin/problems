@@ -1,8 +1,8 @@
-
-
-
+//calculates the time taken to 
+console.time('time taken')
 //give it a number of people standing in a circle 
 let n = 100
+
 //array which will store all the info
 let a = []
 
@@ -11,32 +11,26 @@ for (let i = 0; i < n; i++) {
 }
 
 let kill = false
+
 let i = 0
-while(true) {
+
+while (1) {
     if (new Set(a).size == 2) {
         break
     }
-
     if (a[i] != 0 && kill) {
         a[i] = 0
-        kill = false
+        kill = !kill
     }
     else {
         if (a[i] != 0) {
-
-            kill = true
-
+            kill= !kill
         }
     }
 
-    if (i + 1 == a.length) { i = 0 }
-    else {
-        i++
-    }
-
+    if (i + 1 == a.length) { i = -1 }
+    i++
 }
 
-a.map((data) => {
-    if (data != 0)
-        console.log(`${data} survives till last` )
-})
+console.log(`${Math.max.apply(null,a)} will remain alive `)
+console.timeEnd('time taken')
