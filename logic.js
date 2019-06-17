@@ -20,12 +20,12 @@ while (1) {
         kill = !kill
     }
     if (i + 1 == a.length) {
-        if(a.filter((data) => {
+        if (a.filter((data) => {
             if (data > 0)
                 return data
-        }).length == 1) 
-          break
-         i = -1
+        }).length == 1)
+            break
+        i = -1
     }
     i++
 
